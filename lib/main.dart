@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:whatsappclone/tabs/appeltab.dart';
+import 'package:whatsappclone/tabs/messagetab.dart';
+import 'package:whatsappclone/tabs/statustab.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -360,10 +363,10 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
         body: TabBarView(
           controller: _tabController,
           children: <Widget>[
-            Container(color: Colors.blue,),
-            Container(color: Colors.redAccent,),
-            Container(color: Colors.orange,),
-            Container(color: Colors.yellow,),
+            Container(color: Colors.transparent,),
+            const MessageTab(),
+            const StatusTab(),
+            const AppelTAb(),
           ],
         ),
         floatingActionButton: _fabs[_tabIndex],
